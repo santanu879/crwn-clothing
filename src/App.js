@@ -6,6 +6,8 @@ import Home from './route/home/home.component';
 import Shop from './route/shop/shop.component';
 import Navigation from './route/navegation/navegation.component';
 import SignIn from './route/sign-in/sign-in-component';
+import Checkout from './route/checkout/checkout.component';
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
         <Route index  element={<Home/>}></Route>        
         <Route path='shop'  element={<Shop/>}></Route>
         <Route path='auth'  element={<SignIn/>}></Route>
+        <Route path='checkout' element={<Checkout/>}></Route>
       </Route>
 
     </Routes>
