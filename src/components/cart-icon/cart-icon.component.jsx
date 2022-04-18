@@ -5,7 +5,6 @@ import { useContext } from 'react';
 
 const CartIcon=()=>{
     const {cartItems,isCartOpen,setIsCartOpen}=useContext(CartContext);
-    debugger;
     const toggleCartOpen=()=>{
         setIsCartOpen(!isCartOpen);
     }

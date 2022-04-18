@@ -5,18 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import {UserProvider} from './contexts/user.context';
-import {ProductProvider} from './contexts/products.context';
+import {CategoriesProvider} from './contexts/categories.context';
 import {CartContextProvider} from './contexts/cart.context';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename='crwn-clothing/'>
      <UserProvider>
-       <ProductProvider>
+       <CategoriesProvider>
          <CartContextProvider>
            <App />  
          </CartContextProvider>
-       </ProductProvider>
+       </CategoriesProvider>
      </UserProvider>      
     </BrowserRouter>
   </React.StrictMode>,
