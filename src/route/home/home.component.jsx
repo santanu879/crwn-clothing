@@ -31,9 +31,8 @@ const categories=[
   ]
 
   return (
-    <div className="categories-container">              
-         <Directory categories={categories}/>
-        
+    <div>              
+         <Directory categories={categories}/>        
     </div>
   );
 
