@@ -1,20 +1,13 @@
-import { useNavigate } from 'react-router-dom';
 import ProductCard from '../product-card/product-card.component';
 
 import './category-preview.styles.scss';
 
 const CategoryPreview = ({ title, products }) => {
-  const naivgate= useNavigate()
-
-  const categoriesPreviewHandler=(title)=>{
-      naivgate(`/shop/${title}`);
-  }
+  
 return(
   <div className='category-preview-container'>
     <h2>
-      <span className='title' onClick={()=>{
-        categoriesPreviewHandler(title)
-      }}>{title.toUpperCase()}</span>
+      <span className='title'>{title.toUpperCase()}</span>
     </h2>
     <div className='preview'>
       {products
