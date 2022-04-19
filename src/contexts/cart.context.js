@@ -53,7 +53,6 @@ const INITIAL_STATE = {
 
 const cartReducer = (state, action) => {
   const { type, payload } = action;
-
   switch (type) {
     case CART_ACTION_TYPES.SET_CART_ITEMS:
       return {
@@ -125,7 +124,7 @@ export const CartContextProvider = ({ children }) => {
     updateCartItemsReducer(newCartItems);
   };
 
-  const setIsCartOpen=(isCartOpen)=>{
+  const setIsCartOpen=(isCartOpen)=>{      
     dispatch( createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN,isCartOpen));
   }
 

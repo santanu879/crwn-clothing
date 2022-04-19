@@ -1,4 +1,4 @@
-import { useContext, Fragment } from 'react';
+import React,{ useContext, Fragment } from 'react';
 
 import { CategoriesContext } from '../../contexts/categories.context';
 import CategoryPreview from '../../components/category-preview/category-preview.component';
@@ -19,4 +19,9 @@ const CategoriesPreview = () => {
   );
 };
 
-export default CategoriesPreview;
+function propsAreEqual(prevMovie, nextMovie) { 
+  debugger;  
+  return true;// prevMovie.length === nextMovie.length
+    //&& prevMovie.releaseDate === nextMovie.releaseDate;
+}
+export default React.memo(CategoriesPreview,propsAreEqual);

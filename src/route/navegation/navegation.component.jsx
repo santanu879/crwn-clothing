@@ -10,12 +10,12 @@ import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component
 import './navigation.styles.scss';
 const Navigation=()=>{
     const {currentUser}=useContext(UserContext);
-    const {isCartOpen} =useContext(CartContext)
+    const {isCartOpen,cartItems,cartTotal} =useContext(CartContext)
 
     const signOutUser=async ()=>{
       await userSignout();
     }
-   
+    
     return(
         <Fragment>
             <div className="navigation">
@@ -31,7 +31,7 @@ const Navigation=()=>{
                     }
                     <CartIcon/>
                 </div>
-               {isCartOpen && <CartDropdown/>}
+               {isCartOpen && <CartDropdown cartItems={cartItems} cartTotal={cartTotal}/>}
             </div>
             <Outlet/>
         </Fragment>
