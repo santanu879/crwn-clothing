@@ -24,7 +24,5 @@ const CartDropdown=({cartItems})=>{
         </div>
     )
 }
-function cardPropsAreEqual(prevProps, nextProps) {  
-    return prevProps.cartTotal=== nextProps.cartTotal;
-  }
-export default React.memo(CartDropdown,cardPropsAreEqual);
+
+export default CartDropdown;

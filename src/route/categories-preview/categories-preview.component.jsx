@@ -1,11 +1,16 @@
 import React,{ useContext, Fragment } from 'react';
 
-import { CategoriesContext } from '../../contexts/categories.context';
+//import { CategoriesContext } from '../../contexts/categories.context';
 import CategoryPreview from '../../components/category-preview/category-preview.component';
 
+//Redux 
+import {selectCategoriesMap} from '../../store/categories/category.selector';
+import {useSelector} from 'react-redux';
 
 const CategoriesPreview = () => {
-  const { categoriesMap } = useContext(CategoriesContext);
+  //const { categoriesMap } = useContext(CategoriesContext);
+
+  const categoriesMap =useSelector(selectCategoriesMap);
   
   return (
     <Fragment>
@@ -20,7 +25,6 @@ const CategoriesPreview = () => {
 };
 
 function propsAreEqual(prevMovie, nextMovie) { 
-  debugger;  
   return true;// prevMovie.length === nextMovie.length
     //&& prevMovie.releaseDate === nextMovie.releaseDate;
 }

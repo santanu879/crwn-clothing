@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import React,{ Fragment, useContext } from "react";
 import { Outlet,Link } from "react-router-dom"
 import {ReactComponent as Logo } from '../../assets/crown.svg';
 import { UserContext } from "../../contexts/user.context";
@@ -15,7 +15,7 @@ const Navigation=()=>{
     const signOutUser=async ()=>{
       await userSignout();
     }
-    
+    console.log('Navigation');
     return(
         <Fragment>
             <div className="navigation">
@@ -38,4 +38,8 @@ const Navigation=()=>{
     )
 }
 
-export default Navigation;
+function propsAreEqual(prevProps, nextProps) {  
+    return true;
+  }
+
+export default  React.memo(Navigation,propsAreEqual);
